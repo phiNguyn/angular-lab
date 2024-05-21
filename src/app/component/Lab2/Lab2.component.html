@@ -1,0 +1,51 @@
+<section class="w-full px-10">
+  <h1 class="font-bold text-lg p-5">Product List</h1>
+   <span class="ml-6 font-bold">Filter: </span> <input type="text" class="text-lg border border-black rounded-md ml-4 p-1" [(ngModel)]='filterValue' (input)="filter()">
+  <div class="flex flex-col">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table
+            class="min-w-full text-left text-sm font-light text-surface dark:text-black border-2 rounded-md">
+            <thead
+              class="border border-black font-medium dark:border-white/10">
+              <tr class="border-b border-black">
+                <th scope="col" class="px-6 py-4 cursor-pointer" >IMGAGE</th>
+                <th scope="col" class="px-6 py-4">Product</th>
+                <th scope="col" class="px-6 py-4">Code</th>
+                <th scope="col" class="px-6 py-4">Available</th>
+                <th scope="col" class="px-6 py-4">Price</th>
+                <th scope="col" class="px-6 py-4">5 Start Rating</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of product">
+              <tr class="border-b border-black dark:border-black">
+                <td  class="w-20 px-6 py-4">
+                 
+                  <img    src="{{item.imageUrl}}" alt="Sample Image">
+                </td>
+                <td class="whitespace-nowrap px-6 py-4">{{item.productName}}</td>
+                <td class="whitespace-nowrap px-6 py-4">{{item.productCode}}</td>
+                <td class="whitespace-nowrap px-6 py-4">{{item.releaseDate}}</td>
+                <td class="whitespace-nowrap px-6 py-4">{{item.price}}</td>
+                <td class="whitespace-nowrap px-6 py-4">
+                  <div class="overflow-hidden" [style.width.px]="item.starRating*90/5"  title="rating" >
+                    <div class="w-[90px] flex">
+                        <i class="fa-solid fa-star w-[18px]"></i>
+                        <i class="fa-solid fa-star w-[18px]"></i>
+                        <i class="fa-solid fa-star w-[18px]"></i>
+                        <i class="fa-solid fa-star w-[18px]"></i>
+                        <i class="fa-solid fa-star w-[18px]"></i>
+                        </div>
+                  </div>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

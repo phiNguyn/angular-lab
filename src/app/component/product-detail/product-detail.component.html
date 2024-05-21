@@ -1,0 +1,27 @@
+<div *ngIf="product" class="max-w-7xl w-full mx-auto my-5">
+<h1 class="font-lg font-bold pb-5 border-b border-gray-600">{{product.productName}}</h1>
+
+<div class="w-full">
+   <div class="grid grid-cols-[20%_auto] py-4 text-lg relative">
+    <img class="absolute top-1/2 right-5  -translate-x-1/2 " src="{{product.imageUrl}}" alt="">
+    <div>
+      <div>Name</div>
+      <div>Code</div>
+      <div>Description</div>
+      <div>Availability</div>
+      <div>Price</div>
+      <div>5 Star Rating</div>
+    </div>
+<div>
+  <div>{{product.productName}}</div>
+  <div>{{product.productCode}}</div>
+  <div>{{product.description}}</div>
+  <div>{{product.releaseDate}}</div>
+  <div>{{product.price}}</div>
+  <app-star [rating]="product.starRating" (ratingClicked)="onRatingClicked($event)"></app-star>
+
+
+</div>
+   </div>
+</div>
+</div>
