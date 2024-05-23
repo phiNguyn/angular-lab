@@ -61,8 +61,12 @@ export class ProductDetailComponent implements OnInit {
   ]
   product : any 
   onRatingClicked(message: string): void {
-    console.log(message);
+  
+   alert(message)
+  // console.log(message);
+  
   }
+
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {

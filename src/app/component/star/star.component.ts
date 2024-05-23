@@ -25,10 +25,14 @@ export class StarComponent implements OnInit, OnChanges {
   }
 
   updateStarWidth(): void {
-    this.starWidth = (this.rating * 90) / 5;
+    this.starWidth = (this.rating * 90) / 5 ;
+
   }
 
   onClick(): void {
-    this.ratingClicked.emit(`Đánh giá của sản phẩm là ${this.rating} sao!`);
+    
+    // this.ratingClicked.emit(`Đánh giá của sản phẩm là ${this.rating} sao!`);
+    this.ratingClicked.emit(`${this.rating++}`)
+
   }
 }

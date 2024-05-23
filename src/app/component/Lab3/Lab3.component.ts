@@ -88,7 +88,10 @@ listProduct: ProductList[] = []
       this.showImgae = !this.showImgae
     }
 
-
+    onClick(message:string) : void {
+      alert(message)
+       
+     }
  
 
 }

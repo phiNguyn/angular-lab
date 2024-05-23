@@ -94,7 +94,7 @@ export class Lab4Component implements OnInit {
       }
   
       onClick(message:string) : void {
-    console.log(message);
+   alert(message)
     
   }
    

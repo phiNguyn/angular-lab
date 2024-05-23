@@ -18,8 +18,9 @@
   <div>{{product.description}}</div>
   <div>{{product.releaseDate}}</div>
   <div>{{product.price}}</div>
-  <app-star [rating]="product.starRating" (ratingClicked)="onRatingClicked($event)"></app-star>
-
+  <app-star [rating]="product.starRating" (ratingClicked)="onRatingClicked($event)">
+   
+  </app-star>
 
 </div>
    </div>
